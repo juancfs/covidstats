@@ -1,0 +1,339 @@
+body {
+    background-color: hsl(0, 0%, 96%);
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1rem;
+}
+
+main {
+    text-align: center;
+}
+
+.loading-box {
+    border: 2px solid black;
+    border-radius: 0.6rem;
+    display: inline-block;
+    background-color: white;
+    padding: 3% 6%;
+    text-align: center;
+    position: absolute;
+    right: 50%;
+    top: 50%;
+    -webkit-transform: translate(50%, -50%);
+        -ms-transform: translate(50%, -50%);
+            transform: translate(50%, -50%);
+    z-index: 1;
+}
+
+.circle-1, .circle-2, .circle-3 {
+    display: inline-block;
+    background-color: black;
+    border-radius: 100%;
+    height: 0.8rem;
+    width: 0.8rem;
+}
+
+.virus-loading {
+    margin-bottom: 1rem;
+    -webkit-animation: rotation 2s linear infinite;
+            animation: rotation 2s linear infinite;
+    width: 5rem;
+}
+
+@-webkit-keyframes rotation {
+    100% {
+        -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+    }
+}
+
+@keyframes rotation {
+    100% {
+        -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+    }
+}
+
+.circle-1 {
+    -webkit-animation: up-and-down 1.5s ease-in-out infinite;
+            animation: up-and-down 1.5s ease-in-out infinite;
+}
+
+.circle-2 {
+    -webkit-animation: up-and-down 1.5s ease-in-out infinite 250ms;
+            animation: up-and-down 1.5s ease-in-out infinite 250ms;
+}
+
+.circle-3 {
+    -webkit-animation: up-and-down 1.5s ease-in-out infinite 550ms;
+            animation: up-and-down 1.5s ease-in-out infinite 550ms;
+}
+
+@-webkit-keyframes up-and-down {
+    50% {
+        -webkit-transform: translateY(-100%);
+                transform: translateY(-100%);
+    }
+
+    100% {
+        -webkit-transform: translateY(0);
+                transform: translateY(0);
+    }
+}
+
+@keyframes up-and-down {
+    50% {
+        -webkit-transform: translateY(-100%);
+                transform: translateY(-100%);
+    }
+
+    100% {
+        -webkit-transform: translateY(0);
+                transform: translateY(0);
+    }
+}
+
+.loading-text {
+    font-size: 1.5em;
+}
+
+.shadow {
+    background-color: hsla(0, 0%, 87%, 0.623);
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    right: 0;
+}
+
+.searcher {
+    display: block;
+    margin-top: 11%;
+}
+
+.virus-logo {
+    vertical-align:middle;
+    width: 5rem;
+}
+
+.logo-text {
+    display: inline-block;
+    font-size: 3.5em;
+    vertical-align: middle;
+    line-height: 0;
+}
+
+.search-field {
+    border-radius: 0.5rem;
+    margin-top: 1.5rem;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.5em;
+    height: 3rem;
+    min-width: 40%;
+    max-width: 55%;
+    text-align: center;
+}
+
+label[for=date-field] {
+    font-size: 1.5em;
+}
+
+#date-field {
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-size: 1.5em;
+    margin-top: 1.5rem;
+}
+
+.search-btn {
+    background-color: #28DF99;
+    border-radius: 0.5rem;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-family: "Roboto Mono", monospace;
+    font-size: 1.7em;
+    padding: 1rem 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.search-btn:hover {
+    -webkit-transition: background-color 0.3s;
+    -o-transition: background-color 0.3s;
+    transition: background-color 0.3s;
+    background-color: #1da772;
+}
+
+.input-error {
+    background-color: hsl(0, 50%, 50%);
+    border-radius: 5px;
+    display: none;
+    color: white;
+    padding: 1.5rem;
+}
+
+.close-btn {
+    display: none;
+    background-color: transparent;
+    border: 2px solid black;
+    border-radius: 0.3rem;
+    font-size: 1.2em;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 0.5%;
+    right: 1%;
+    z-index: 1;
+    -webkit-transition: background-color 0.3s, color 0.3s;
+    -o-transition: background-color 0.3s, color 0.3s;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.close-btn:hover {
+    background-color: black;
+    color: white;
+}
+
+.results {
+    display: none;
+    background-color: hsl(60, 100%, 94%);
+    border-radius: 0.6rem;
+    position: absolute;
+    top: 5%;
+    bottom: 5%;
+    right: 50%;
+    -webkit-transform: translateX(50%);
+        -ms-transform: translateX(50%);
+            transform: translateX(50%);
+    padding: 1rem;
+    width: 70vw;
+    overflow-y: auto;
+    z-index: 1;
+}
+
+.flag {
+    min-width: 30%;
+    max-width: 33%;
+    z-index: 2;
+}
+
+.country-heading {
+    font-size: 2em;
+    margin-bottom: 2rem;
+    z-index: 2;
+}
+
+.table-container {
+    width: 100%;
+    overflow: auto;
+}
+
+.country-table {
+    border-collapse: collapse;
+    border: 1px solid black;
+    display: table;
+    font-size: 1.1em;
+    margin: auto;
+    width: 80%;
+}
+
+.table-heading {
+    background-color: #397367;
+    color: white;
+}
+
+.country-table th, .country-table td {
+    padding: 1rem;
+}
+
+.table-content > th {
+    background-color: #28DF99;
+    color: white;
+}
+
+.table-content > td {
+    background-color: #F6F7D4;
+}
+
+footer {
+    margin-top: 6%;
+    padding: 1.5rem 1.5rem 0;
+    text-align: center;
+}
+
+.love {
+    font-weight: bold;
+    color: rgb(212, 68, 92);
+}
+
+.owid-link, .flagpedia-link {
+    color: #082444;
+    text-decoration: underline;
+    -webkit-transition: background-color 0.3s, color 0.3s;
+    -o-transition: background-color 0.3s, color 0.3s;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.owid-link:hover {
+    background-color: #082444;
+    color: white;
+}
+
+.flagpedia-link:hover {
+    background-color: #b00414;
+    color: white;
+}
+
+.github-icon {
+    width: 3.5rem;
+}
+
+/* Styles for mobile devices */
+
+@media (max-width: 834px) {
+    body {
+        font-size: 0.7rem;
+    }
+
+    .virus {
+        width: 3.5rem;
+    }
+
+    .searcher {
+        margin-top: 15%;
+    }
+
+    footer {
+        margin-top: 5%;
+    }
+
+    .github-icon {
+        width: 2.5rem;
+    }
+}
+
+@media (max-width: 425px) {
+    body {
+        font-size: 0.6rem;
+    }
+
+    .searcher {
+        margin-top: 27%;
+    }
+
+    .search-field {
+        font-size: 1em;
+        min-width: 50%;
+    }
+
+    .search-btn {
+        padding: 0.9rem 1.2rem;
+    }
+
+    .close-btn {
+        right: 2%;
+    }
+
+    footer {
+        margin-top: 8%;
+    }
+}
